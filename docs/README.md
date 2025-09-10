@@ -17,8 +17,8 @@ other projects don't mix with this project.
 # How to Install
 [Linux](/getting-started/Linux.md)
 
-[windows](/getting-started/Windows.md)
+[Windows](/getting-started/Windows.md)
 
-[mac](/getting-started/Linux.md)
+[Mac](/getting-started/Linux.md)
 
-[Docker Container](/getting-started/Docker.md)
+[Docker](/getting-started/Docker.md)
