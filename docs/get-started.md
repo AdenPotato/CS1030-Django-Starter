@@ -16,4 +16,6 @@ other projects don't mix with this project.
 
 [windows](/getting-started/Windows.md)
 
-[mac](/getting-started/linux.md) - Same as linux
+[mac](/getting-started/Linux.md) - Same as linux
+
+[Docker Container]()
