@@ -2,4 +2,4 @@
 
 This is the Docs for how we will setup our Django project.
 
-[Get Started](/docs/get-started.md)
+[Get Started](/get-started.md)
