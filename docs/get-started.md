@@ -12,10 +12,10 @@ that is specific for your project. This makes it so dependencies of
 other projects don't mix with this project.
 
 # How to Install
-[Linux](/getting-started/linux.md)
+[Linux](/getting-started/Linux.md)
 
 [windows](/getting-started/Windows.md)
 
-[mac](/getting-started/linux.md) - Same as linux
+[mac](/getting-started/Linux.md) - Same as linux
 
 [Docker Container]()
