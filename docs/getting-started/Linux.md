@@ -26,13 +26,15 @@ cd portfolio
 ```
 
 This will lead you into the portfolio folder. we will create our virtual enviorment from there,
-we do this with the command
+we do this with the command:
+
 ```bash
 python3 -m venv djvenv
 ```
 
 This command tells python to create a virtual enviroment in that directory called djvenv.
-we tell our system we want that as our source directory by doing
+we tell our system we want that as our source directory by doing:
+
 ```bash
 source djvenv/bin/activate
 ```
@@ -47,6 +49,7 @@ pip install django
 ```
 
 Now that django installed we can now start our django project.
+
 ```bash
 django-admin startproject django_project
 ```
@@ -61,6 +64,7 @@ rm -r django_project/django_project/
 ```
 
 we can now run the command to start the server:
+
 ```bash
 python3 manage.py runserver
 ```
