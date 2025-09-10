@@ -6,8 +6,8 @@ export default defineUserConfig({
   base: '/CS1030-Django-Starter/',
   lang: 'en-US',
 
-  title: 'VuePress',
-  description: 'My first VuePress Site',
+  title: 'Django Project',
+  description: '',
 
   theme: defaultTheme({
     logo: 'https://vuejs.press/images/hero.png',

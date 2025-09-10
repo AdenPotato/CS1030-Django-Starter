@@ -13,5 +13,7 @@ other projects don't mix with this project.
 
 # How to Install
 [Linux](/getting-started/linux.md)
+
 [windows](/getting-started/Windows.md)
+
 [mac](/getting-started/linux.md) - Same as linux
