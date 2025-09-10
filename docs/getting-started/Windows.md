@@ -45,3 +45,8 @@ This just runs a script for powershell that puts your powershell to use that vir
 
 #TODO add picture of what this looks like
 
+This is where we can now run python commands and starting installing python for our install:
+```powershell
+py -m pip install django
+```
+
