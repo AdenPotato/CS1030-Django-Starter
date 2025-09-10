@@ -13,15 +13,7 @@ export default defineUserConfig({
     logo: 'https://vuejs.press/images/hero.png',
 
     navbar: ['/', '/get-started'],
-  }),
-  
-
-  bundler: viteBundler(),
-
-})
-
-module.export = {
-  themeConfig: {
+    themeConfig: {
     sidebar: [
       '/',
       '/getting-started/Linux.md',
@@ -29,4 +21,9 @@ module.export = {
       '/getting-started/Windows.md',
     ]
   }
-}
+  }),
+  
+
+  bundler: viteBundler(),
+
+})
