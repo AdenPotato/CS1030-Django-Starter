@@ -1,4 +1,4 @@
-# Linux
+# Linux / Mac
 
 Before you start this process make sure that Python3 is installed.
 On my machine i had to install python3-full to get my virutal enviroment set up.

@@ -14,4 +14,4 @@ other projects don't mix with this project.
 # How to Install
 [Linux and Mac](/Installing/Linux.md)
 
-[windows](/Installing/Windows.md)
+[Windows](/Installing/Windows.md)
