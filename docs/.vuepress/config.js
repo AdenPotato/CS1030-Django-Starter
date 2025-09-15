@@ -2,6 +2,7 @@ import { defaultTheme } from '@vuepress/theme-default'
 import { defineUserConfig } from 'vuepress'
 import { viteBundler } from '@vuepress/bundler-vite'
 
+
 export default defineUserConfig({
   base: '/CS1030-Django-Starter/',
   lang: 'en-US',
@@ -13,16 +14,32 @@ export default defineUserConfig({
     logo: 'https://vuejs.press/images/hero.png',
 
     navbar: [],
-    themeConfig: {
-      sidebar: [
-    "/README.md", 
-    "/Installing/get-started.md", 
-    "/Installing/Linux.md",
-    "/Installing/Windows.md", ],
-  }
-  }),
+    sidebar: [
+    //sidebar item - Welcome
+    {
+      
+      text: 'Welcome',
+      link: 'README.md',
+      collapsible: false,
+      
+    },
+    //sidebar item - installing
+    {
+      text: 'Installing',
+      link: '/Installing/get-started.md',
+      collapsible: false,
+      children: ['/Installing/Linux.md', '/Installing/Windows.md']
+    },
+  ]
+    
+      
+    
+
+    
+}),
   
 
   bundler: viteBundler(),
 
 })
+

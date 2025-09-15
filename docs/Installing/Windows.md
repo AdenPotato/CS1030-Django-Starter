@@ -1,4 +1,4 @@
-# Setup for Windows
+# Windows
 
 First install python from [here](https://www.python.org/downloads/)
 Click the python download button and follow the install process for the installer.
