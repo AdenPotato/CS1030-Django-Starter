@@ -12,6 +12,6 @@ that is specific for your project. This makes it so dependencies of
 other projects don't mix with this project.
 
 # How to Install
-[Linux and Mac](/getting-started/Linux.md)
+[Linux and Mac](/Installing/Linux.md)
 
-[windows](/getting-started/Windows.md)
+[windows](/Installing/Windows.md)
