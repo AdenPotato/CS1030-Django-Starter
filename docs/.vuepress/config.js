@@ -14,12 +14,11 @@ export default defineUserConfig({
 
     navbar: [],
     themeConfig: {
-    sidebar: [
-      '/',
-      '/getting-started/Linux.md',
-      '/getting-started/Docker.md',
-      '/getting-started/Windows.md',
-    ]
+      sidebar: [
+    "/README.md", 
+    "/Installing/get-started.md", 
+    "/Installing/Linux.md",
+    "/Installing/Windows.md", ],
   }
   }),
   
