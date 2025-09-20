@@ -17,7 +17,7 @@ This is where we will create our projects for the class.</p>
 This folder will be the place where all of our portfolio will be held.</p>
 <p>now if you right click in the empty folder you can open in terminal, this just opens a terminal in that directory.</p>
 <p>To create our Virtual Enviorment we run the command</p>
-<div class="language-powershell line-numbers-mode" data-highlighter="prismjs" data-ext="powershell"><pre v-pre><code><span class="line">python <span class="token operator">-</span>m venv djvenv</span>
+<div class="language-powershell line-numbers-mode" data-highlighter="prismjs" data-ext="powershell"><pre v-pre><code><span class="line">py <span class="token operator">-</span>m venv djvenv</span>
 <span class="line"></span></code></pre>
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p>This creates the virtual enviroment, it might take a second so let it run till we return to the termnial.
 now is when we allow for scripts to be ran in this powershell. If you don't want to be forced to do this every time you run powershell,
@@ -31,6 +31,21 @@ you can run powershell as admin or use a bash interface, such as WSL.</p>
 <p>This is where we can now run python commands and starting installing python for our install:</p>
 <div class="language-powershell line-numbers-mode" data-highlighter="prismjs" data-ext="powershell"><pre v-pre><code><span class="line">py <span class="token operator">-</span>m pip install django</span>
 <span class="line"></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div></div></template>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p>you will be prompted to upgrade pip so run the commany</p>
+<div class="language-powershell line-numbers-mode" data-highlighter="prismjs" data-ext="powershell"><pre v-pre><code><span class="line">python<span class="token punctuation">.</span>exe <span class="token operator">-</span>m pip install <span class="token operator">--</span>upgrade pip</span>
+<span class="line"></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p>to update your pip.</p>
+<p>now lets look into getting your python project setup. you can run <code v-pre>django-admin startproject django_project</code> to create your project, we will end up moving files so the project makes more sense.</p>
+<p>You will move all contents in the django_project folder into our project folder. Your Project Directory will look like this:</p>
+<p>#TODO Add old and new pictures of what it should look like.</p>
+<p>Lets add the next we run</p>
+<div class="language-powershell line-numbers-mode" data-highlighter="prismjs" data-ext="powershell"><pre v-pre><code><span class="line">django-admin startapp portfolio_app</span>
+<span class="line"></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p>Portfolio app will be our project we create first.</p>
+<p>Now Run this command</p>
+<div class="language-powershell line-numbers-mode" data-highlighter="prismjs" data-ext="powershell"><pre v-pre><code><span class="line">py manage<span class="token punctuation">.</span>py runserver</span>
+<span class="line"></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p>You can open <a href="http://localhost:8000/" target="_blank" rel="noopener noreferrer">http://localhost:8000/</a>to see if the server is now running!</p>
+</div></template>
 
 

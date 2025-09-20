@@ -46,13 +46,16 @@ This just runs a script for powershell that puts your powershell to use that vir
 #TODO add picture of what this looks like
 
 This is where we can now run python commands and starting installing python for our install:
+
 ```powershell
 py -m pip install django
-
-
 ```
 
-you will be prompted to upgrade pip so run the commany ``python.exe -m pip install --upgrade pip`` to update your pip.
+you will be prompted to upgrade pip so run the commany 
+```powershell
+python.exe -m pip install --upgrade pip
+``` 
+to update your pip.
 
 now lets look into getting your python project setup. you can run ``django-admin startproject django_project`` to create your project, we will end up moving files so the project makes more sense.
 
@@ -61,7 +64,11 @@ You will move all contents in the django_project folder into our project folder.
 #TODO Add old and new pictures of what it should look like.
 
 
-Lets add the next we run ``django-admin startapp portfolio_app``
+Lets add the next we run 
+```powershell
+django-admin startapp portfolio_app
+```
+
 Portfolio app will be our project we create first. 
 
 Now Run this command 
