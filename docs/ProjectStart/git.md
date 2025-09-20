@@ -7,6 +7,9 @@ we will also create a ``.gitignore`` file that will tell github to ignore files 
 
 the file will look like this:
 
+<details>
+<summary>.gitignore</summary>
+
 ```
 # Byte-compiled / optimized / DLL files
 __pycache__/
@@ -229,3 +232,4 @@ __marimo__/
 # Streamlit
 .streamlit/secrets.toml
 ```
+</details>
