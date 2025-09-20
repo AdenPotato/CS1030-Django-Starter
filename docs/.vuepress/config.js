@@ -30,6 +30,12 @@ export default defineUserConfig({
       collapsible: false,
       children: ['/Installing/Linux.md', '/Installing/Windows.md']
     },
+    {
+      text: 'Starting The Project',
+      link: '/ProjectStart/ProjectStart.md',
+      collapsible: false,
+      children: ['/ProjectStart/Understanding-Django.md']
+    },
   ]
     
       
