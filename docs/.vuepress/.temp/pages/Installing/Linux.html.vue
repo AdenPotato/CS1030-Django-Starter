@@ -1,4 +1,4 @@
-<template><div><h1 id="linux" tabindex="-1"><a class="header-anchor" href="#linux"><span>Linux</span></a></h1>
+<template><div><h1 id="linux-mac" tabindex="-1"><a class="header-anchor" href="#linux-mac"><span>Linux / Mac</span></a></h1>
 <p>Before you start this process make sure that Python3 is installed.
 On my machine i had to install python3-full to get my virutal enviroment set up.
 That is done by entering this into the terminal:</p>

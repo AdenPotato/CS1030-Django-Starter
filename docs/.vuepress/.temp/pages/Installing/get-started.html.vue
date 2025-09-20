@@ -9,7 +9,7 @@ that is specific for your project. This makes it so dependencies of
 other projects don't mix with this project.</p>
 <h1 id="how-to-install" tabindex="-1"><a class="header-anchor" href="#how-to-install"><span>How to Install</span></a></h1>
 <p><RouteLink to="/Installing/Linux.html">Linux and Mac</RouteLink></p>
-<p><RouteLink to="/Installing/Windows.html">windows</RouteLink></p>
+<p><RouteLink to="/Installing/Windows.html">Windows</RouteLink></p>
 </div></template>
 
 

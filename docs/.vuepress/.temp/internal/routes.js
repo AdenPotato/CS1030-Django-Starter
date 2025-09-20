@@ -1,11 +1,11 @@
 export const redirects = JSON.parse("{}")
 
 export const routes = Object.fromEntries([
-  ["/", { loader: () => import(/* webpackChunkName: "index.html" */"/home/aden/school/cs1030/CS1030-Django-Starter/docs/.vuepress/.temp/pages/index.html.js"), meta: {"title":"Welcome"} }],
-  ["/Installing/Linux.html", { loader: () => import(/* webpackChunkName: "Installing_Linux.html" */"/home/aden/school/cs1030/CS1030-Django-Starter/docs/.vuepress/.temp/pages/Installing/Linux.html.js"), meta: {"title":"Linux"} }],
-  ["/Installing/Windows.html", { loader: () => import(/* webpackChunkName: "Installing_Windows.html" */"/home/aden/school/cs1030/CS1030-Django-Starter/docs/.vuepress/.temp/pages/Installing/Windows.html.js"), meta: {"title":"Windows"} }],
-  ["/Installing/get-started.html", { loader: () => import(/* webpackChunkName: "Installing_get-started.html" */"/home/aden/school/cs1030/CS1030-Django-Starter/docs/.vuepress/.temp/pages/Installing/get-started.html.js"), meta: {"title":"Setting up Your Django Enviroment"} }],
-  ["/404.html", { loader: () => import(/* webpackChunkName: "404.html" */"/home/aden/school/cs1030/CS1030-Django-Starter/docs/.vuepress/.temp/pages/404.html.js"), meta: {"title":""} }],
+  ["/", { loader: () => import(/* webpackChunkName: "index.html" */"/home/adenl/CS1030/CS1030-Django-Starter/docs/.vuepress/.temp/pages/index.html.js"), meta: {"title":"Welcome"} }],
+  ["/Installing/Linux.html", { loader: () => import(/* webpackChunkName: "Installing_Linux.html" */"/home/adenl/CS1030/CS1030-Django-Starter/docs/.vuepress/.temp/pages/Installing/Linux.html.js"), meta: {"title":"Linux / Mac"} }],
+  ["/Installing/Windows.html", { loader: () => import(/* webpackChunkName: "Installing_Windows.html" */"/home/adenl/CS1030/CS1030-Django-Starter/docs/.vuepress/.temp/pages/Installing/Windows.html.js"), meta: {"title":"Windows"} }],
+  ["/Installing/get-started.html", { loader: () => import(/* webpackChunkName: "Installing_get-started.html" */"/home/adenl/CS1030/CS1030-Django-Starter/docs/.vuepress/.temp/pages/Installing/get-started.html.js"), meta: {"title":"Setting up Your Django Enviroment"} }],
+  ["/404.html", { loader: () => import(/* webpackChunkName: "404.html" */"/home/adenl/CS1030/CS1030-Django-Starter/docs/.vuepress/.temp/pages/404.html.js"), meta: {"title":""} }],
 ]);
 
 if (import.meta.webpackHot) {

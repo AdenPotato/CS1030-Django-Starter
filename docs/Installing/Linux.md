@@ -73,3 +73,4 @@ This is where you will use your prefered editor for your machine.
 If you are using WSL (windows subsystem for linux) you can type ```code .``` to run VSCode
 
 You can open [http://localhost:8000/](http://localhost:8000/)to see if the server is now running!
+
