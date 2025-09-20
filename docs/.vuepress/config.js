@@ -30,11 +30,12 @@ export default defineUserConfig({
       collapsible: false,
       children: ['/Installing/Linux.md', '/Installing/Windows.md']
     },
+    //sidebar item - Starting THe Project
     {
       text: 'Starting The Project',
       link: '/ProjectStart/ProjectStart.md',
       collapsible: false,
-      children: ['/ProjectStart/Understanding-Django.md']
+      children: ['/ProjectStart/git.md']
     },
   ]
     
