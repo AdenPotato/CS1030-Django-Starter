@@ -313,3 +313,147 @@ path('', views.index, name='index'),
 now running the server with ``python3 manage.py runserer`` on linux or ``py manage.py runserver`` on windows. Now open [http://127.0.0.1:8000](http://127.0.0.1:8000) and you should see a home page.
 
 #TODO add picture example of what it should look like
+
+Now we will update ``portfolio_apps/views.py`` views by defining the following view for the home page
+
+```python
+from django.shortcuts import render
+from django.http import HttpResponse
+# Create your views here.
+def index(request):
+# Render index.html
+return render( request, 'portfolio_app/index.html')
+```
+
+openning [http://127.0.0.1:8000](http://127.0.0.1:8000) will result in a issue which we will fix next part.
+
+# Creating the Template
+
+First lets create a folder called templates in our portfolio_app folder, then create a folder called portfolio app in that templates folder, the directory should look like ``portfolio_app/templates/portfolio_app``.
+
+Now create a ``base_template.html`` file in ``templates/portfolio_app`` folder. This will contain the html needed on every page, such as the navigation menu. Paste the following into it:
+
+```html
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>UCCS CS Students</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,
+initial-scale=1">
+<title>Bootstrap demo</title>
+<link
+href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap
+.min.css" rel="stylesheet"
+integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDE
+XuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+<body>
+<div class="container-fluid">
+<!-- Navbar-->
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+<img src="{% static 'images/uccs_logo.gif' %}">
+<div class="container-fluid">
+<button class="navbar-toggler" type="button"
+data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+aria-controls="navbarNavAltMarkup" aria-expanded="false"
+aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse"
+id="navbarNavAltMarkup">
+<div class="navbar-nav">
+<!-- {% url 'index' %} is defined in url path to
+dynamically create url -->
+<a class="nav-link active" aria-current="page" href="{%
+url 'index' %}">Home</a>
+<a class="nav-link" href="#">Menu 2</a>
+<a class="nav-link" href="#">Menu 3</a>
+{% if user.is_authenticated %}
+<a class="nav-link" href="{% url 'logout' %}?next={{
+request.path }}">Logout {{user}}</a>
+{% else %}
+<a class="nav-link" href="{% url 'login' %}?next={{
+request.path }}">Login</a>
+{% endif %}
+</div>
+</div>
+</div>
+</nav>
+<div class="col-sm-10">
+<!-- add block content from html template -->
+{% block content %}
+{% endblock %}
+```
+
+in this piece of code you will notice ``{% codeblock %}``, these sections are where django will fill in the data provided form the database. for now we don't have to worry to much at these, but later these are the basis of using this framework.
+
+now lets create a index html in the same folder as the last directory, title it ``index.html``, we will put this: 
+```html
+<!-- inherit from base.html-->
+{% extends "portfolio_app/base_template.html" %}
+<!-- Replace block content in base_template.html -->
+{% block content %}
+<h1>Computer Science Portfolios</h1>
+<h2>More to come from [and your name goes here]</h2>
+{% endblock %}
+```
+
+Make sure to fill in your name.
+
+Restarting our server results in seeing an error. Try and investigate why this error occured and try to fix it. (Hint look at the login field in the html)
+
+Now your website should look good and should be functioning.
+
+
+# Static Content
+Static content is content such as pictures. To add static content we first need to add to our ``settings.py``
+
+We need the top of the ``settings.py`` file to look like this:
+
+```python
+import os
+
+from pathlib import Path
+```
+
+next, near the bottom of the file we need to add settings that tell Django where to find the static content of the website. this is built from the BASE_DIR defined in ``settings.py`` already.
+
+```python
+# Static files (CSS, JavaScript, Images)
+# https://docs.djangoproject.com/en/4.2/howto/static-files/
+STATIC_URL = 'static/'
+STATICFILES_DIRS = [
+os.path.join(BASE_DIR, 'static')
+]
+MEDIA_URL = '/images/'
+```
+
+At the top of our ``base_template.html`` we add ``{% load static %}`` above ``<!DOCTYPE html>``
+
+```html
+{% load static %}
+
+<!DOCTYPE html>
+```
+
+if you want to test this out you can download [This Picture](https://brand.uccs.edu/sites/g/files/kjihxj1416/files/inline-images/uccs-signature-email.gif)
+
+and replace 
+```html
+<a class="navbar-brand" href="#">Navbar</a>
+```
+with
+```html
+<img src="{% static 'images/uccs_logo.gif' %}">
+```
+
+After this, open [http://127.0.0.1:8000](http://127.0.0.1:8000) and you  should see the logo.
+
+Now version on your branch and update your remote repository.
+You can merge with your main branch and tag the code as GE02.
+
+We have now finished the first section of our website!
+
+[orignal Resource](https://docs.google.com/document/d/1qFe5nsJ5JPfvojJ15Mr6Z49xBQXN5AvY/edit#heading=h.1fob9te)
