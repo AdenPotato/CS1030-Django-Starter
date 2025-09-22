@@ -9,3 +9,5 @@ you to use your prefered Systems install method. We will setup
 an enviorment called a Virtual Enviorment.
 
 [Start With Installing](/Installing/get-started.md)
+
+If help is needed, please add AdenPotato on discord and i will be happly help.
