@@ -244,7 +244,72 @@ __marimo__/
 
 after this i would commit your stage and commit those files. I do this through my VScode but you can do this through your termnial as well. [This Link](https://education.github.com/git-cheat-sheet-education.pdf) will help you understand git commands and will be a useful resource for using git.
 
-# Our first additions to the code
+# Creating the Portfolio App
 
+We will first make our portfolio app. This is done with running ``django-admin startapp portfolio_app`` in our terminal.
 
+This creates our protfiol app and adds files into it. After that we will need to edit or django_project's settings.py file, adding portfolio_app to our installed apps and adding an authentication backend:
 
+```python
+INSTALLED_APPS = [
+# ...
+'django.contrib.auth',
+'django.contrib.contenttypes',
+'django.contrib.sessions',
+'django.contrib.messages',
+'Django.contrib.staticfiles',
+# Add your app name here
+'portfolio_app',
+]
+# Add support for authenticating users
+AUTHENTICATION_BACKENDS = [
+'django.contrib.auth.backends.ModelBackend',
+]
+```
+
+# Defining URL path and view
+
+#TODO ADD RESOURCES
+
+Open django_project urls.py to add our admin path to include specfiic urls that will be created in the portfolio_app urls.py. You need to import include:
+
+```python
+from django.contrib import admin
+from django.urls import path, include
+urlpatterns = [
+path('admin/', admin.site.urls),
+#connect path to portfolio_app urls
+path('', include('portfolio_app.urls')),
+]
+```
+
+After this we will update our ``portfolio_app/views.py`` by defining the following view for the home page:
+
+```python
+from django.shortcuts import render
+from django.http import HttpResponse
+# Create your views here.
+def index(request):
+# Render the HTML template index.html with the data in the
+context variable.
+return HttpResponse('home page')
+```
+
+and we will now create a urls.py file in our portfolio_app that contains a path to the defined view:
+
+```python
+from django.urls import path
+from . import views
+urlpatterns = [
+#path function defines a url pattern
+#'' is empty to represent based path to app
+# views.index is the function defined in views.py
+# name='index' parameter is to dynamically create url
+# example in html <a href="{% url 'index' %}">Home</a>.
+path('', views.index, name='index'),
+]
+```
+
+now running the server with ``python3 manage.py runserer`` on linux or ``py manage.py runserver`` on windows. Now open [http://127.0.0.1:8000](http://127.0.0.1:8000) and you should see a home page.
+
+#TODO add picture example of what it should look like

@@ -3,6 +3,254 @@
 <div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre v-pre><code><span class="line">pip freeze > requirements.txt</span>
 <span class="line"></span></code></pre>
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p>Running this in our virutal enviorment in a termnial lets us see what prerequistes we need for our project.</p>
-</div></template>
+<h1 id="git" tabindex="-1"><a class="header-anchor" href="#git"><span>Git</span></a></h1>
+<p>We will make a new branch for our project, this lets us make a seperate section of code that lets us modify code while keeping a old backup of our code.</p>
+<p>running <code v-pre>git checkout -b GE02</code> will create a new branch of code called GE02.
+we will also create a <code v-pre>.gitignore</code> file that will tell github to ignore files to our repo</p>
+<p>the file will look like this:</p>
+<details>
+<summary>.gitignore</summary>
+<div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre v-pre><code><span class="line"># Byte-compiled / optimized / DLL files</span>
+<span class="line">__pycache__/</span>
+<span class="line">django_project/__pycache__/</span>
+<span class="line">*.py[codz]</span>
+<span class="line">*$py.class</span>
+<span class="line"></span>
+<span class="line"># C extensions</span>
+<span class="line">*.so</span>
+<span class="line"></span>
+<span class="line"># Distribution / packaging</span>
+<span class="line">.Python</span>
+<span class="line">build/</span>
+<span class="line">develop-eggs/</span>
+<span class="line">dist/</span>
+<span class="line">downloads/</span>
+<span class="line">eggs/</span>
+<span class="line">.eggs/</span>
+<span class="line">lib/</span>
+<span class="line">lib64/</span>
+<span class="line">parts/</span>
+<span class="line">sdist/</span>
+<span class="line">var/</span>
+<span class="line">wheels/</span>
+<span class="line">share/python-wheels/</span>
+<span class="line">*.egg-info/</span>
+<span class="line">.installed.cfg</span>
+<span class="line">*.egg</span>
+<span class="line">MANIFEST</span>
+<span class="line"></span>
+<span class="line"># PyInstaller</span>
+<span class="line">#  Usually these files are written by a python script from a template</span>
+<span class="line">#  before PyInstaller builds the exe, so as to inject date/other infos into it.</span>
+<span class="line">*.manifest</span>
+<span class="line">*.spec</span>
+<span class="line"></span>
+<span class="line"># Installer logs</span>
+<span class="line">pip-log.txt</span>
+<span class="line">pip-delete-this-directory.txt</span>
+<span class="line"></span>
+<span class="line"># Unit test / coverage reports</span>
+<span class="line">htmlcov/</span>
+<span class="line">.tox/</span>
+<span class="line">.nox/</span>
+<span class="line">.coverage</span>
+<span class="line">.coverage.*</span>
+<span class="line">.cache</span>
+<span class="line">nosetests.xml</span>
+<span class="line">coverage.xml</span>
+<span class="line">*.cover</span>
+<span class="line">*.py.cover</span>
+<span class="line">.hypothesis/</span>
+<span class="line">.pytest_cache/</span>
+<span class="line">cover/</span>
+<span class="line"></span>
+<span class="line"># Translations</span>
+<span class="line">*.mo</span>
+<span class="line">*.pot</span>
+<span class="line"></span>
+<span class="line"># Django stuff:</span>
+<span class="line">*.log</span>
+<span class="line">local_settings.py</span>
+<span class="line">db.sqlite3</span>
+<span class="line">db.sqlite3-journal</span>
+<span class="line"></span>
+<span class="line"># Flask stuff:</span>
+<span class="line">instance/</span>
+<span class="line">.webassets-cache</span>
+<span class="line"></span>
+<span class="line"># Scrapy stuff:</span>
+<span class="line">.scrapy</span>
+<span class="line"></span>
+<span class="line"># Sphinx documentation</span>
+<span class="line">docs/_build/</span>
+<span class="line"></span>
+<span class="line"># PyBuilder</span>
+<span class="line">.pybuilder/</span>
+<span class="line">target/</span>
+<span class="line"></span>
+<span class="line"># Jupyter Notebook</span>
+<span class="line">.ipynb_checkpoints</span>
+<span class="line"></span>
+<span class="line"># IPython</span>
+<span class="line">profile_default/</span>
+<span class="line">ipython_config.py</span>
+<span class="line"></span>
+<span class="line"># pyenv</span>
+<span class="line">#   For a library or package, you might want to ignore these files since the code is</span>
+<span class="line">#   intended to run in multiple environments; otherwise, check them in:</span>
+<span class="line"># .python-version</span>
+<span class="line"></span>
+<span class="line"># pipenv</span>
+<span class="line">#   According to pypa/pipenv#598, it is recommended to include Pipfile.lock in version control.</span>
+<span class="line">#   However, in case of collaboration, if having platform-specific dependencies or dependencies</span>
+<span class="line">#   having no cross-platform support, pipenv may install dependencies that don't work, or not</span>
+<span class="line">#   install all needed dependencies.</span>
+<span class="line">#Pipfile.lock</span>
+<span class="line"></span>
+<span class="line"># UV</span>
+<span class="line">#   Similar to Pipfile.lock, it is generally recommended to include uv.lock in version control.</span>
+<span class="line">#   This is especially recommended for binary packages to ensure reproducibility, and is more</span>
+<span class="line">#   commonly ignored for libraries.</span>
+<span class="line">#uv.lock</span>
+<span class="line"></span>
+<span class="line"># poetry</span>
+<span class="line">#   Similar to Pipfile.lock, it is generally recommended to include poetry.lock in version control.</span>
+<span class="line">#   This is especially recommended for binary packages to ensure reproducibility, and is more</span>
+<span class="line">#   commonly ignored for libraries.</span>
+<span class="line">#   https://python-poetry.org/docs/basic-usage/#commit-your-poetrylock-file-to-version-control</span>
+<span class="line">#poetry.lock</span>
+<span class="line">#poetry.toml</span>
+<span class="line"></span>
+<span class="line"># pdm</span>
+<span class="line">#   Similar to Pipfile.lock, it is generally recommended to include pdm.lock in version control.</span>
+<span class="line">#   pdm recommends including project-wide configuration in pdm.toml, but excluding .pdm-python.</span>
+<span class="line">#   https://pdm-project.org/en/latest/usage/project/#working-with-version-control</span>
+<span class="line">#pdm.lock</span>
+<span class="line">#pdm.toml</span>
+<span class="line">.pdm-python</span>
+<span class="line">.pdm-build/</span>
+<span class="line"></span>
+<span class="line"># pixi</span>
+<span class="line">#   Similar to Pipfile.lock, it is generally recommended to include pixi.lock in version control.</span>
+<span class="line">#pixi.lock</span>
+<span class="line">#   Pixi creates a virtual environment in the .pixi directory, just like venv module creates one</span>
+<span class="line">#   in the .venv directory. It is recommended not to include this directory in version control.</span>
+<span class="line">.pixi</span>
+<span class="line"></span>
+<span class="line"># PEP 582; used by e.g. github.com/David-OConnor/pyflow and github.com/pdm-project/pdm</span>
+<span class="line">__pypackages__/</span>
+<span class="line"></span>
+<span class="line"># Celery stuff</span>
+<span class="line">celerybeat-schedule</span>
+<span class="line">celerybeat.pid</span>
+<span class="line"></span>
+<span class="line"># Redis</span>
+<span class="line">*.rdb</span>
+<span class="line">*.aof</span>
+<span class="line">*.pid</span>
+<span class="line"></span>
+<span class="line"># RabbitMQ</span>
+<span class="line">mnesia/</span>
+<span class="line">rabbitmq/</span>
+<span class="line">rabbitmq-data/</span>
+<span class="line"></span>
+<span class="line"># ActiveMQ</span>
+<span class="line">activemq-data/</span>
+<span class="line"></span>
+<span class="line"># SageMath parsed files</span>
+<span class="line">*.sage.py</span>
+<span class="line"></span>
+<span class="line"># Environments</span>
+<span class="line">.env</span>
+<span class="line">.envrc</span>
+<span class="line">.venv</span>
+<span class="line">.djvenv/</span>
+<span class="line">djvenv/</span>
+<span class="line">djvenv/*</span>
+<span class="line">env/</span>
+<span class="line">venv/</span>
+<span class="line">ENV/</span>
+<span class="line">env.bak/</span>
+<span class="line">venv.bak/</span>
+<span class="line"></span>
+<span class="line"># Spyder project settings</span>
+<span class="line">.spyderproject</span>
+<span class="line">.spyproject</span>
+<span class="line"></span>
+<span class="line"># Rope project settings</span>
+<span class="line">.ropeproject</span>
+<span class="line"></span>
+<span class="line"># mkdocs documentation</span>
+<span class="line">/site</span>
+<span class="line"></span>
+<span class="line"># mypy</span>
+<span class="line">.mypy_cache/</span>
+<span class="line">.dmypy.json</span>
+<span class="line">dmypy.json</span>
+<span class="line"></span>
+<span class="line"># Pyre type checker</span>
+<span class="line">.pyre/</span>
+<span class="line"></span>
+<span class="line"># pytype static type analyzer</span>
+<span class="line">.pytype/</span>
+<span class="line"></span>
+<span class="line"># Cython debug symbols</span>
+<span class="line">cython_debug/</span>
+<span class="line"></span>
+<span class="line"># PyCharm</span>
+<span class="line">#  JetBrains specific template is maintained in a separate JetBrains.gitignore that can</span>
+<span class="line">#  be found at https://github.com/github/gitignore/blob/main/Global/JetBrains.gitignore</span>
+<span class="line">#  and can be added to the global gitignore or merged into this file.  For a more nuclear</span>
+<span class="line">#  option (not recommended) you can uncomment the following to ignore the entire idea folder.</span>
+<span class="line">#.idea/</span>
+<span class="line"></span>
+<span class="line"># Abstra</span>
+<span class="line"># Abstra is an AI-powered process automation framework.</span>
+<span class="line"># Ignore directories containing user credentials, local state, and settings.</span>
+<span class="line"># Learn more at https://abstra.io/docs</span>
+<span class="line">.abstra/</span>
+<span class="line"></span>
+<span class="line"># Visual Studio Code</span>
+<span class="line">#  Visual Studio Code specific template is maintained in a separate VisualStudioCode.gitignore</span>
+<span class="line">#  that can be found at https://github.com/github/gitignore/blob/main/Global/VisualStudioCode.gitignore</span>
+<span class="line">#  and can be added to the global gitignore or merged into this file. However, if you prefer,</span>
+<span class="line">#  you could uncomment the following to ignore the entire vscode folder</span>
+<span class="line"># .vscode/</span>
+<span class="line"></span>
+<span class="line"># Ruff stuff:</span>
+<span class="line">.ruff_cache/</span>
+<span class="line"></span>
+<span class="line"># PyPI configuration file</span>
+<span class="line">.pypirc</span>
+<span class="line"></span>
+<span class="line"># Marimo</span>
+<span class="line">marimo/_static/</span>
+<span class="line">marimo/_lsp/</span>
+<span class="line">__marimo__/</span>
+<span class="line"></span>
+<span class="line"># Streamlit</span>
+<span class="line">.streamlit/secrets.toml</span>
+<span class="line"></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></details>
+<p>after this i would commit your stage and commit those files. I do this through my VScode but you can do this through your termnial as well. <a href="https://education.github.com/git-cheat-sheet-education.pdf" target="_blank" rel="noopener noreferrer">This Link</a> will help you understand git commands and will be a useful resource for using git.</p>
+<h1 id="creating-the-portfolio-app" tabindex="-1"><a class="header-anchor" href="#creating-the-portfolio-app"><span>Creating the Portfolio App</span></a></h1>
+<p>We will first make our portfolio app. This is done with running <code v-pre>django-admin startapp portfolio_app</code> in our terminal.</p>
+<p>This creates our protfiol app and adds files into it. After that we will need to edit or django_project's settings.py file, adding:</p>
+<div class="language-python line-numbers-mode" data-highlighter="prismjs" data-ext="py"><pre v-pre><code><span class="line">INSTALLED_APPS <span class="token operator">=</span> <span class="token punctuation">[</span></span>
+<span class="line"><span class="token comment"># ...</span></span>
+<span class="line"><span class="token string">'django.contrib.auth'</span><span class="token punctuation">,</span></span>
+<span class="line"><span class="token string">'django.contrib.contenttypes'</span><span class="token punctuation">,</span></span>
+<span class="line"><span class="token string">'django.contrib.sessions'</span><span class="token punctuation">,</span></span>
+<span class="line"><span class="token string">'django.contrib.messages'</span><span class="token punctuation">,</span></span>
+<span class="line"><span class="token string">'Django.contrib.staticfiles'</span><span class="token punctuation">,</span></span>
+<span class="line"><span class="token comment"># Add your app name here</span></span>
+<span class="line"><span class="token string">'portfolio_app'</span><span class="token punctuation">,</span></span>
+<span class="line"><span class="token punctuation">]</span></span>
+<span class="line"><span class="token comment"># Add support for authenticating users</span></span>
+<span class="line">AUTHENTICATION_BACKENDS <span class="token operator">=</span> <span class="token punctuation">[</span></span>
+<span class="line"><span class="token string">'django.contrib.auth.backends.ModelBackend'</span><span class="token punctuation">,</span></span>
+<span class="line"><span class="token punctuation">]</span></span>
+<span class="line"></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></div></template>
 
 

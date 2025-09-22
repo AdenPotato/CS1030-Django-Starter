@@ -7,7 +7,6 @@ export const routes = Object.fromEntries([
   ["/Installing/get-started.html", { loader: () => import(/* webpackChunkName: "Installing_get-started.html" */"/home/adenl/CS1030/CS1030-Django-Starter/docs/.vuepress/.temp/pages/Installing/get-started.html.js"), meta: {"title":"Setting up Your Django Enviroment"} }],
   ["/ProjectStart/ProjectStart.html", { loader: () => import(/* webpackChunkName: "ProjectStart_ProjectStart.html" */"/home/adenl/CS1030/CS1030-Django-Starter/docs/.vuepress/.temp/pages/ProjectStart/ProjectStart.html.js"), meta: {"title":"Lets Start"} }],
   ["/ProjectStart/Understanding-Django.html", { loader: () => import(/* webpackChunkName: "ProjectStart_Understanding-Django.html" */"/home/adenl/CS1030/CS1030-Django-Starter/docs/.vuepress/.temp/pages/ProjectStart/Understanding-Django.html.js"), meta: {"title":""} }],
-  ["/ProjectStart/git.html", { loader: () => import(/* webpackChunkName: "ProjectStart_git.html" */"/home/adenl/CS1030/CS1030-Django-Starter/docs/.vuepress/.temp/pages/ProjectStart/git.html.js"), meta: {"title":"Git"} }],
   ["/404.html", { loader: () => import(/* webpackChunkName: "404.html" */"/home/adenl/CS1030/CS1030-Django-Starter/docs/.vuepress/.temp/pages/404.html.js"), meta: {"title":""} }],
 ]);
 

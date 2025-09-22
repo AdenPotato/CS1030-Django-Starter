@@ -35,7 +35,7 @@ export default defineUserConfig({
       text: 'Starting The Project',
       link: '/ProjectStart/ProjectStart.md',
       collapsible: false,
-      children: ['/ProjectStart/git.md']
+      children: []
     },
   ]
     
