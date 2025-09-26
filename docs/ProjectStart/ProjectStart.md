@@ -1,4 +1,4 @@
-# Lets Start
+# GE02 Project Start
 
 Starting the project is quite simple, we are just going to understand what we installed and what we need.
 ```
